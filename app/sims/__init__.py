@@ -15,6 +15,7 @@ from mrsimulator.signal_processing import SignalProcessor
 
 from . import navbar
 from .fit import fit_body
+from .couplings import couplings_body
 from .graph import DEFAULT_FIGURE
 from .graph import plot_1D_trace
 from .graph import plot_2D_trace
@@ -93,11 +94,18 @@ top_nav = html.Div([navbar.navbar_top, simulation_alert, import_alert, graph_ale
 bottom_nav = navbar.navbar_bottom
 
 # main body items
-body_content = [home_body, spin_system_body, method_body, fit_body, spectrum_body]
+body_content = [
+    home_body,
+    spin_system_body,
+    method_body,
+    fit_body,
+    couplings_body,
+    spectrum_body,
+]
 main_body = html.Div(body_content, className="mobile-scroll")
 
 # temp items
-temp = [html.Div(id=f"temp{i}") for i in range(6)]
+temp = [html.Div(id=f"temp{i}") for i in range(6)]  # What are temp items doing?
 
 # content page
 content = html.Div([*temp, main_body, store_items, bottom_nav], className="app-1")

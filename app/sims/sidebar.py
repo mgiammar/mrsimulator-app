@@ -9,7 +9,7 @@ from dash.dependencies import State
 from app import app
 
 
-SIDEBAR_TAB_NAME = ["info", "spin_systems", "methods", "fit", "spectrum"]
+SIDEBAR_TAB_NAME = ["info", "methods", "spin_systems", "fit", "couplings", "spectrum"]
 
 
 def home():
@@ -34,6 +34,12 @@ def fit():
     """Fit tab."""
     icon = html.I(className="fas fa-bullseye fa-lg")
     return html.Li(html.Span(icon), id="view-fit")
+
+
+def couplings():
+    """Couplings tab."""
+    icon = html.I(className="fas fa-arrows-alt fa-lg")
+    return html.Li(html.Span(icon), id="view-couplings")
 
 
 def spectrum():
@@ -68,13 +74,22 @@ app.clientside_callback(
 
 
 def tooltips():
-    """Tooltips for Home, Spin System, and Method tabs."""
-    tips = ["Home", "Spin Systems", "Methods", "Fit", "Spectrum", "Settings"]
+    """Tooltips for Home, Spin System, Method, Fit, Couplings and Spectrum tabs."""
+    tips = [
+        "Home",
+        "Methods",
+        "Spin Systems",
+        "Fit",
+        "Couplings",
+        "Spectrum",
+        "Settings",
+    ]
     targets = [
         "view-info",
-        "view-spin_systems",
         "view-methods",
+        "view-spin_systems",
         "view-fit",
+        "view-couplings",
         "view-spectrum",
         "advance-setting",
     ]
@@ -89,8 +104,11 @@ def tooltips():
 def sidebar_tabs():
     """Includes
     1. Home
-    2. Spin system
-    3. Method
+    2. Method
+    3. Spin system
+    4. Fit
+    5. Couplings
+    6. Spectrum
     """
     # file_menu_ui = (
     #     html.Div(html.Ul(file_menu, className="menu"), className="master-toolbar"),
@@ -101,6 +119,7 @@ def sidebar_tabs():
         method(),
         spin_system(),
         fit(),
+        couplings(),
         spectrum(),
         tooltips(),
     ]

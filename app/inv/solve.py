@@ -2,7 +2,9 @@
 import csdmpy as cp
 import numpy as np
 import plotly.graph_objs as go
-from mrinversion.linear_model import SmoothLassoLS
+# from mrinversion.linear_model import SmoothLassoLS
+
+SmoothLassoLS = None
 
 
 def solve(l1, l2, data):

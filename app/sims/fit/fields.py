@@ -18,6 +18,9 @@ from mrsimulator.utils.spectral_fitting import make_LMFIT_params
 
 from app import app
 
+__author__ = ["Deepansh J. Srivastava", "Matthew D. Giammar"]
+__email__ = ["srivastava.89@osu.edu", "giammar.7@osu.edu"]
+
 
 CSS_STR = '*{font-family:"Helvetica",sans-serif;}td{padding: 0 8px}'
 

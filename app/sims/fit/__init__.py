@@ -6,6 +6,9 @@ import dash_html_components as html
 from .fields import fields
 from app.custom_widgets import custom_button
 
+__author__ = ["Deepansh J. Srivastava", "Matthew D. Giammar"]
+__email__ = ["srivastava.89@osu.edu", "giammar.7@osu.edu"]
+
 
 store = [
     # JSON string of Parameters object
