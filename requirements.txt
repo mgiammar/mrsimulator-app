@@ -9,7 +9,7 @@ gunicorn==20.1.0
 mrsimulator==0.6.0
 lmfit==1.0.3
 redis==3.5.3
-celery[redis]==5.1.2
+celery[redis]==5.2.1
 mrinversion>=0.1
 matplotlib>=3.4
 pdfkit==0.6.1
