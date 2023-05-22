@@ -12,5 +12,5 @@ redis==3.5.3
 celery[redis]==5.2.7
 mrinversion>=0.1
 matplotlib>=3.4
-pdfkit==0.6.1
+pdfkit==1.0.0
 kaleido==0.2.1
