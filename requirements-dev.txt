@@ -1,7 +1,7 @@
 
 flask==2.2.3
 uuid==1.30
-plotly==5.13.1
+plotly==5.15.0
 dash==1.20.0
 dash_bootstrap_components==1.4.0
 dash-extensions==0.0.60
